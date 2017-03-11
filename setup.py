@@ -5,5 +5,5 @@ setup(name='apn',
       description='APN format verification tool',
       author='Eric Proulx and Ken Harmon',
       packages=find_packages(),
-      package_data={'us': ['*.pkl']},
+      package_data={'apn': ['*.pkl']},
       )
