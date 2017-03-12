@@ -1,104 +1,87 @@
-APN Validator
+apn-formatter
 =============
-This is a tool to validate APN formats
+This package is meant to validate or lookup APN formats for any given state/county in the United States.
 
 |Build Status|
 
 Getting Started
 ---------------
+To get started, install the package: ::
 
-To get started, install the package
-```
-pip install apn
-```
+    pip install apn-formatter
 
 Prerequisites
-#############
+-------------
+- python 2.7
+- `fuzzywuzzy <https://pypi.python.org/pypi/fuzzywuzzy>`__
+- `python-Levenshtein <https://pypi.python.org/pypi/python-Levenshtein/0.12.0>`__
 
-You'll need FuzzyWuzzy, python-Levenshtein
+
+Examples
+--------
+Lookup formats: ::
+
+    >> import apn
+    >> apn.lookup(state='WA')
+    {'WA': {'King': ['XXXXXX-XXXX', 'XXXXXXXX', 'XXXXXX-XXXXSXX'], 'Snohomish': ['XXXXXXXXXXXXXX','XXXXXXX'], ...}}
+    >> apn.lookup(state='WA', county='King')
+    {'WA': {'King': ['XXXXXX-XXXX', 'XXXXXXXX', 'XXXXXX-XXXXSXX']}}
+    >> apn.lookup()
+    {'WA': {'King': ['XXXXXX-XXXX', 'XXXXXXXX', 'XXXXXX-XXXXSXX'], ...}, 'CA': {...}, ...}
+
+Validate APN: ::
+
+  >> import apn
+  >> apn.validate(apn_input='123456-1234') # Search every counties' APN format
+  [<APN:XXXXXX-XXXX>, ...]
+  >> apn.validate(apn_input='123456-1234', state='WA')
+  [<APN:XXXXXX-XXXX>]
+  >> apn.validate(apn_input='123456-1234', state='WA', county='King')
+  [<APN:XXXXXX-XXXX>]
+  >> apn.validate(apn_input='123456-1234', state='Washington')
+  [<APN:XXXXXX-XXXX>]
+  >> apn.validate(apn_input='123456-1234', state='washngton')
+  [<APN:XXXXXX-XXXX>]
 
 
-Installing
-##########
+Errors
+------
+The following uses cases are events in which an error will be thrown:
 
-A step by step series of examples that tell you have to get a development env running
+- County but not state is provided
+- County name does not match our validation methods (see below)
+- County does not exist in the given state
+- State name does not match our validation methods (see below)
+- State abbrev is incorrect
+- APN regex formula is invalid
+- APN format doesn't match the given state/county
 
-Say what the step will be
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-Break down into end to end tests
-################################
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-And coding style tests
-######################
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-Deployment
-##########
-
-Add additional notes about how to deploy this on a live system
-
-Built With
-##########
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Validation Method
+-----------------
+We're using the string match library, *fuzzywuzzy*, to determine a certainty level against
+State (full name) and County names. We'll handle the name matching if you wish to use this
+against direct user input, however be **warned** that our certainty level is arbitrary to
+our judgement and the use cases we've encountered. It is always a best practice to validate
+user input yourself.
 
 Contributing
-############
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-Versioning
-##########
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+------------
+Contributions are welcome, but I doubt anyone will be interested in using this package.
+We're currently storing our data in a SQLite3 database, *apn.db*. If you make updates to this database
+please run the *build.py* script to re-pickle the data.
 
 Authors
-#######
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+-------
+- **Eric Proulx** - *Owner* - `Website <http://www.ericproulx.com/>`__
+- **Ken Harmon** - *Owner* - `Website <https://kenharmon.net/>`__
 
 License
-#######
+-------
+This project is licensed under the MIT License - see the `LICENSE <https://github.com/dogpackdesign/apn-formats/blob/master/LICENSE>`__ file for details
 
-This project is licensed under the MIT License - see the LICENSE .. _a link: /LICENSE file for details
-
-Acknowledgments
-###############
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+Changelog
+---------
 
 .. |Build Status| image:: https://travis-ci.org/dogpackdesign/apn-formats.svg?branch=master
    :target: https://travis-ci.org/profile/dogpackdesign
