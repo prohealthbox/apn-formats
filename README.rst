@@ -1,5 +1,5 @@
-apn-formatter
-=============
+apn-formats
+===========
 This package is meant to validate or lookup APN formats for any given state/county in the United States.
 
 |Build Status|
