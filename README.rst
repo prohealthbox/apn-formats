@@ -99,5 +99,5 @@ Acknowledgments
 * Inspiration
 * etc
 
-..|Build Status| image:: https://travis-ci.org/dogpackdesign/apn-formats.svg?branch=master
-:target: https://travis-ci.org/profile/dogpackdesign
+.. |Build Status| image:: https://travis-ci.org/dogpackdesign/apn-formats.svg?branch=master
+   :target: https://travis-ci.org/profile/dogpackdesign
