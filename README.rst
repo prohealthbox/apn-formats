@@ -1,10 +1,11 @@
 APN Validator
 =============
 This is a tool to validate APN formats
+
 |Build Status|
 
 Getting Started
-###############
+---------------
 
 To get started, install the package
 ```
