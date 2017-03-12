@@ -1,8 +1,7 @@
-*************
 APN Validator
-*************
-.. image:: https://travis-ci.org/dogpackdesign/apn-formats.svg?branch=master
+=============
 This is a tool to validate APN formats
+|Build Status|
 
 Getting Started
 ###############
@@ -99,3 +98,6 @@ Acknowledgments
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
+
+..|Build Status| image:: https://travis-ci.org/dogpackdesign/apn-formats.svg?branch=master
+:target: https://travis-ci.org/profile/dogpackdesign
