@@ -9,7 +9,7 @@ def main():
                 length = len(formats["regex"])
                 if length > 0:
                     for i in range(0, length):
-                        jfile[state][county]["regex"][i] = "^" + jfile[state][county]["formats"][i] + "$"
+                        jfile[state][county]["regex"][i] = "^" + jfile[state][county]["regex"][i] + "$"
 
     with open("regex.json", "w") as jsonfile:
         json.dump(jfile, jsonfile)
