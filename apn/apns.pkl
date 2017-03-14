@@ -142259,4 +142259,94 @@ V^\u005cd{2}\u005c.\u005cd{2}\u005c.\u005cd{2}\u005c.\u005cd{2}$
 p47424
 sg12
 I7903
+sa(dp47425
+g2
+VDC
+p47426
+sg4
+VDistrict of Columbia
+p47427
+sg6
+VDistrict of Columbia
+p47428
+sg8
+VXXXXSSSSSSXXXX
+p47429
+sg10
+V^\u005c\u005cd{4}\u005c\u005cs{6}\u005c\u005cd{4}$
+p47430
+sg12
+I7904
+sa(dp47431
+g2
+VDC
+p47432
+sg4
+VDistrict of Columbia
+p47433
+sg6
+VDistrict of Columbia
+p47434
+sg8
+VXXXXSASSSSXXXX
+p47435
+sg10
+V^\u005c\u005cd{4}\u005c\u005cs\u005c\u005c[A-Z]\u005c\u005cs{4}\u005c\u005cd{4}$
+p47436
+sg12
+I7905
+sa(dp47437
+g2
+VDC
+p47438
+sg4
+VDistrict of Columbia
+p47439
+sg6
+VDistrict of Columbia
+p47440
+sg8
+VAAASSXXXXSXXXX
+p47441
+sg10
+V^\u005c\u005c[A-Z]{3}\u005c\u005cs{2}\u005c\u005cd{4}\u005c\u005cs\u005c\u005cd{4}$
+p47442
+sg12
+I7906
+sa(dp47443
+g2
+VDC
+p47444
+sg4
+VDistrict of Columbia
+p47445
+sg6
+VDistrict of Columbia
+p47446
+sg8
+VAAXXSXXXXSXXXX
+p47447
+sg10
+V^\u005c\u005c[A-Z]{2}\u005c\u005cd{2}\u005c\u005cs\u005c\u005cd{4}\u005c\u005cs\u005c\u005cd{4}$
+p47448
+sg12
+I7907
+sa(dp47449
+g2
+VDC
+p47450
+sg4
+VDistrict of Columbia
+p47451
+sg6
+VDistrict of Columbia
+p47452
+sg8
+VAAXXSXXXASXXXX
+p47453
+sg10
+V^\u005c\u005c[A-Z]{2}\u005c\u005cd{2}\u005c\u005cs\u005c\u005cd{3}\u005c\u005cs\u005c\u005c[A-Z]\u005c\u005cs\u005c\u005cd{4}$
+p47454
+sg12
+I7908
 sa.
