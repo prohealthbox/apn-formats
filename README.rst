@@ -8,7 +8,7 @@ Getting Started
 ---------------
 To get started, install the package: ::
 
-    pip install apn-formatter
+    pip install apn
 
 Prerequisites
 -------------
