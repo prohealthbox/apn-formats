@@ -3,3 +3,5 @@
 /helper/error.txt
 apn.egg-info/
 dist/
+.pypirc
+
