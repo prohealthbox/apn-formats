@@ -1,3 +1,5 @@
 *.pyc
 .idea/
 /helper/error.txt
+apn.egg-info/
+dist/
