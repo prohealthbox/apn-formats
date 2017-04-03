@@ -23,7 +23,7 @@ __title__ = "apn"
 __summary__ = "APN formatter tool to verify APN numbers"
 __uri__ = "https://github.com/dogpackdesign/apn-formats"
 
-__version__ = "0.0.1"
+__version__ = "1.0.0"
 
 __author__ = "Eric Proulx and Ken Harmon"
 __email__ = "contact@dogpackdesign.com"
