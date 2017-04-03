@@ -8,7 +8,7 @@ states = (
     'Tennessee', 'New York', 'Pennsylvania', 'Alaska', 'Nevada', 'Virginia', 'Colorado', 'California', 'Alabama',
     'Arkansas', 'Vermont', 'Illinois', 'Georgia', 'Indiana', 'Iowa', 'Massachusetts', 'Arizona', 'Idaho', 'Maine',
     'Maryland', 'Oklahoma', 'Ohio', 'Utah', 'Missouri', 'Minnesota', 'Michigan', 'Rhode Island', 'Kansas', 'Montana',
-    'Mississippi', 'South Carolina', 'Kentucky', 'Oregon', 'South Dakota')
+    'Mississippi', 'South Carolina', 'Kentucky', 'Oregon', 'South Dakota', 'Connecticut')
 
 
 def clean_str(str):
